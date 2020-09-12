@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Game</title>
+    <title>Billy and the fruits - Game</title>
     <style>
       body {
         margin: 0;
@@ -20,14 +20,20 @@
         box-sizing: border-box;
         background-color: rgba(0, 0, 255, 0.75);
       }
-      #player_object {
+      #player_object,
+      #food_object {
         display: none;
       }
     </style>
   </head>
   <body>
     <canvas width="640" height="640" id="game"></canvas>
-    <img src="./player.jpeg" id="player_object" />
-    <script src="script.js"></script>
+    <img src="/assets/player.png" id="player_object" />
+    <img src="./assets/food.png" id="food_object" />
+
+    <script src="./scripts/player.js"></script>
+    <script src="./scripts/obstacle.js"></script>
+    <script src="./scripts/fruit.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
