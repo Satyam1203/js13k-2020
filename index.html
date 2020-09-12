@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Billy and the Apples - Game</title>
+    <title>Village Not Found - 404</title>
     <style>
       * {
         margin: 0;
@@ -33,30 +33,41 @@
         display: none;
       }
       #instructions {
+        /* display: none; */
         width: 250px;
         position: absolute;
         top: 30%;
         left: 50px;
         line-height: 1.25;
       }
+      #desc {
+        margin: 16px 0;
+      }
+      button {
+        cursor: pointer;
+        padding: 8px;
+      }
+      #status {
+        margin: 16px 0;
+        color: red;
+        text-transform: uppercase;
+      }
     </style>
   </head>
   <body>
     <div id="instructions">
-      <h3>Level - 1</h3>
-      <p>
-        Billy wants to go to other village and on his way, he finds a field of
-        apple. He loves apples and he wants to eat all of them present in the
-        field currently but there are some obstacles preventing him on his way
-        to the destination. Help him go to other village by avoiding obtacles.
-        (The door can be used once per level after eating all apples.)
-      </p>
+      <h3>Level - <span id="level"></span></h3>
+      <p id="desc"></p>
       <div>
-        <button onclick="level1()">Start</button>
-        <button onclick="level2()">Start2</button>
+        <button onclick="play()">Start</button>
         <button onclick="restart()">Reset</button>
       </div>
+      <div id="status"></div>
     </div>
+    <p style="margin-top: 16px">
+      <b>Controls</b>: Use <b>arrow keys</b> or W(top), A(left), S(bottom),
+      D(right) to move and <b>Space</b> bar to hit bullets(Round-2)
+    </p>
     <canvas width="640" height="640" id="game"></canvas>
     <img src="/assets/player.png" id="player_object" />
     <img src="./assets/food.png" id="food_object" />
@@ -65,6 +76,8 @@
     <script src="./scripts/player.js"></script>
     <script src="./scripts/obstacle.js"></script>
     <script src="./scripts/fruit.js"></script>
+    <script src="./scripts/monster.js"></script>
+    <script src="./scripts/bullet.js"></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
