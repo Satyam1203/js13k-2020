@@ -14,7 +14,6 @@ class Obstacle {
     if (this.x >= 640 - this.size) this.speed = -this.speed;
     if (this.x <= 0) this.speed = -this.speed;
     ctx.fillRect(this.x, this.y, this.size, s);
-    // console.log("updated");
   }
   colloide() {
     return (

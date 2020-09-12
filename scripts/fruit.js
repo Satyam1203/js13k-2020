@@ -10,7 +10,6 @@ class Fruit {
       this.y === 480
     ) {
       this.y = Math.floor((Math.random() * 640) / 32) * 32;
-      console.log(this.y);
     }
     while (
       (this.y === 0 && this.x === 608) ||
@@ -18,7 +17,6 @@ class Fruit {
     ) {
       this.x = Math.floor((Math.random() * 640) / 32) * 32;
     }
-    console.log("drawn at ", this.x, this.y);
     ctx.fillStyle = "yellow";
     ctx.fillRect(this.x, this.y, 32, 32);
     ctx.drawImage(food_object, this.x, this.y, 32, 32);
@@ -28,7 +26,6 @@ class Fruit {
   }
   displaceFood() {
     this.val = 1;
-    console.log(this.val);
     this.x = -32;
     this.y = -32;
   }

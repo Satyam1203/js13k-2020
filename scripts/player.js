@@ -4,8 +4,6 @@ class Player {
     this.x = CANVAS_WIDTH / 2 - this.size;
     this.y = CANVAS_HEIGHT - this.size;
     ctx.fillStyle = "black";
-    //   console.log("Player");
-    //   console.log(this.x, this.y);
   }
 
   draw() {
@@ -13,7 +11,6 @@ class Player {
   }
 
   update(direction) {
-    // console.log(this.x, this.y);
     ctx.clearRect(this.x, this.y, this.size, this.size);
     if (direction === "r") {
       if (this.x + 2 * this.size <= CANVAS_WIDTH) this.x += this.size;

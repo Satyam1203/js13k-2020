@@ -32,7 +32,7 @@ const drawNotFound = () => {
 const drawFound = () => {
   ctx.font = "80px sans-serif";
   ctx.fillStyle = "white";
-  ctx.fillText("200 - Found!", 60, CANVAS_HEIGHT / 2);
+  ctx.fillText("200 - Found!", 75, CANVAS_HEIGHT / 2);
 };
 
 class FinalState {
@@ -113,10 +113,8 @@ const level1 = () => {
       direction = "b";
       player.update(direction);
     }
-    //   console.log(direction);
   };
   var gameLoop = setInterval(() => {
-    // console.log(player.y, obstacle1.y);
     obstacle1.move();
     obstacle2.move();
     obstacle3.move();
@@ -163,6 +161,9 @@ const level2 = () => {
   let monsterHits = 0;
   let bullet = new Bullet();
   let monster = new Monster();
+  document.getElementById("score").innerText = `Bullets Remaining - ${
+    5 - fires
+  }, Hits - ${monsterHits}`;
 
   document.onkeydown = function (e) {
     if (game_over) return;
@@ -186,6 +187,9 @@ const level2 = () => {
       ) {
         fires++;
         bullet.initialize();
+        document.getElementById("score").innerText = `Bullets Remaining - ${
+          5 - fires
+        }, Hits - ${monsterHits}`;
       }
     }
   };
@@ -199,7 +203,9 @@ const level2 = () => {
         monsterHits++;
         if (monster.speed < 0) monster.speed -= 2;
         else monster.speed += 2;
-        console.log("Monster Hit");
+        document.getElementById("score").innerText = `Bullets Remaining - ${
+          5 - fires
+        }, Hits - ${monsterHits}`;
       }
     }
     if (monsterHits === 3) {
