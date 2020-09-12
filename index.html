@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Game</title>
+    <style>
+      body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #game {
+        display: block;
+        margin: auto;
+        box-sizing: border-box;
+        background-color: rgba(0, 0, 255, 0.75);
+      }
+      #player_object {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="640" height="640" id="game"></canvas>
+    <img src="./player.jpeg" id="player_object" />
+    <script src="script.js"></script>
+  </body>
+</html>
